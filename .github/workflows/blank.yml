@@ -46,6 +46,6 @@ jobs:
           pip install virtualenv
           virtualenv envzappa2
           source envzappa2/bin/activate
-          pip install -r requirements.txt
+          pip install -r requiremnts.txt
           zappa update
 
