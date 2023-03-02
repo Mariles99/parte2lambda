@@ -41,4 +41,11 @@ jobs:
              aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
              aws-region: us-east-1    
       
-      
+      - name: install virtualenv and execute pytest
+        run: |
+          pip install virtualenv
+          virtualenv envzappa2
+          source envzappa2/bin/activate
+          pip install -r requirements.txt
+          zappa update
+
